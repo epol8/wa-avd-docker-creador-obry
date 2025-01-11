@@ -1,6 +1,6 @@
-FROM dorowu/ubuntu-desktop-lxde-vnc:xenial
+FROM yodascholtz/docker-android-whatsapp-avd
 
-RUN mkdir /app
+#RUN mkdir /app
 WORKDIR /app
 
 # Install tools and JDK
