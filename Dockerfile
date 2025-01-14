@@ -1,8 +1,6 @@
-FROM dorowu/ubuntu-desktop-lxde-vnc:xenial
-
-RUN mkdir /app
-WORKDIR /app
-
+FROM yodascholtz/docker-android-whatsapp-avd
+#https://github.com/open-wa/wa-avd-docker
+#RUN mkdir /app
 # Install tools and JDK
 RUN apt-get update \
 	&& apt-get install -y \
@@ -34,7 +32,6 @@ ENV PATH $PATH:$ANDROID_HOME/platform-tools
 
 # Download Android SDK tools
 # TODO: can this process be simplified?
-RUN rm -rf ${ANDROID_HOME}/tools
 RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -P /app \
 	&& yes 'A' | unzip /app/sdk-tools-linux-4333796.zip -d ${ANDROID_HOME} \
 	&& yes | ${ANDROID_HOME}/tools/bin/sdkmanager \

@@ -24,7 +24,7 @@ Run the following command
 
 Using `emulator` throws an error described somewhere on SO... can't recall where, anyway the fix is to call from directory directly.
 
-**NOTE**
+**NOTE** 
 
 At the moment the Docker entrypoint CMD/Supervisord isn't configuring the AVD. For now, to do it manually, run:
 
